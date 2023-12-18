@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ @font-face {
+    font-family: Raleway;
+    src: url(Folder/Raleway-Regular.ttf);
+ }
+body{
+    font-size: 18px;
+    color: white;
+    background-color: rgb(71 85 105);
+    font-family: 'Raleway';
+    letter-spacing: 0.5px;
+}
+
+.title{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    font-size: 1.3em;
+}
+
+.player-div1,
+.player-div2{
+    font-size: 1.5em;
+
+}
+
+
+
+.turn2{
+    opacity: 0;
+}
+
+.grid-board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid rgb(161 161 170);
+    height: 75vh;
+    width: 75vh;
+    background-color: rgb(23, 27, 39);
+}
+
+.square{
+    border: 1px solid rgb(161 161 170);
+    font-size: 10.5em;
+    font-weight: 900;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    height: 90vh;
+}
+
+/*</div>
+        <div class="players">
+    <div class="player-div1">
+        <h2>Player 1: X</h2>
+        <p class="turn1">Player 1's turn</p>
+    </div>
+     <div class="player-div2">
+        <h2>Player 2: O</h2>
+        <p class="turn2">Player 2's turn</p>
+    </div>*/
