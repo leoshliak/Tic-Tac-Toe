@@ -30,10 +30,16 @@ body{
 
 }
 
-
+.turn1{
+    opacity: 1;
+}
 
 .turn2{
-    opacity: 0;
+    opacity: 1;
+}
+
+.notYourTurn{
+    opacity: 0.5;
 }
 
 .grid-board{
@@ -62,13 +68,8 @@ body{
     height: 90vh;
 }
 
-/*</div>
-        <div class="players">
-    <div class="player-div1">
-        <h2>Player 1: X</h2>
-        <p class="turn1">Player 1's turn</p>
-    </div>
-     <div class="player-div2">
-        <h2>Player 2: O</h2>
-        <p class="turn2">Player 2's turn</p>
-    </div>*/
+
+.square:hover{
+    cursor: pointer;
+    background-color: rgb(34, 40, 58);
+}
