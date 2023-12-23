@@ -1,24 +1,22 @@
 const GameBoard = (function(){
-    const boardArray = ['', '', '', '', '', '', '', '', '',]
+    const boardArray = ['', '', '', '', '', '', '', '', '',];
+    let gameOver = false;
   const squares = document.querySelectorAll('.square');
-  
   const player1 = {
     marker: 'X',
     hisTurn: true,
 }
   const player2 = {
     marker: 'O',
-    hisTurn: false,
+    hisTurn: false, 
 }
- squares.forEach(addEventListener('click', function(e){
-    if(!e.target.classList.contains('square'))return;
-    if(!e.target.textContent == '')return;
-   printMarker(e); 
-   turnFunct();
-  }));
 
-
-  function turnFunct(){
+  const playRound = {
+ addToArray: function(e){
+     boardArray[e.target.id] = e.target.textContent;
+     console.log(boardArray)
+   },
+   turnFunct: function(){
     const turn1String = document.querySelector('.turn1');
   const turn2String = document.querySelector('.turn2');
   const player1Title = document.querySelector('.player1');
@@ -38,13 +36,39 @@ const GameBoard = (function(){
    player1Title.classList.remove('notYourTurn');
    player2Title.classList.add('notYourTurn');
 }
-}
- function  printMarker(e){
+},
+  printMarker: function (e){
     if(player1.hisTurn == true ){
       e.target.textContent =  player1.marker;
     }else if(player1.hisTurn == false ){
       e.target.textContent = player2.marker;
     }
-  }
-   
+  },  
+  checkForWinner: function(board){
+    const winningComb = [
+      [0, 1, 2], [3, 4, 5], 
+      [6, 7, 8], [0, 3, 6], 
+      [1, 4, 7], [2, 5, 8], 
+      [0, 4, 8], [2, 4, 6], 
+    ];
+    for (let i = 0; i < winningComb.length; i++) {
+      const [a, b, c] = winningComb[i];
+      
+      if (board[a] && board[a] === board[b] && board[b] === board[c]) {
+        alert(`Player ${board[a]} Won`);
+        
+        return gameOver = true;
+      }
+    }
+  },
+ }
+  squares.forEach(addEventListener('click', function(e){
+    if(!e.target.classList.contains('square'))return;
+    if(!e.target.textContent == '')return;
+    if(gameOver == true)return;
+   playRound.printMarker(e); 
+   playRound.addToArray(e);
+   playRound.checkForWinner(boardArray);
+   playRound.turnFunct();
+  }));
 })();
