@@ -47,14 +47,16 @@ body{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     border: 1px solid rgb(161 161 170);
-    height: 75vh;
-    width: 75vh;
+    height: 65vh;
+    width: 65vh;
     background-color: rgb(23, 27, 39);
+    margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 .square{
     border: 1px solid rgb(161 161 170);
-    font-size: 10.5em;
+    font-size: 9.2em;
     font-weight: 900;
     text-align: center;
 }
@@ -64,7 +66,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 200px;
+    gap: 180px;
     height: 90vh;
 }
 
@@ -72,4 +74,34 @@ body{
 .square:hover{
     cursor: pointer;
     background-color: rgb(34, 40, 58);
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.restart{
+    width: 300px;
+    height: 80px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    font-size: 2em;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.restart:hover{
+    background-color: rgb(25, 26, 27);  
+    border: rgb(25, 26, 27);
+    cursor: pointer;
+}
+
+.restart:active{
+    background-color: rgb(36, 38, 39);  
+    transform: scale(1.01);
 }
