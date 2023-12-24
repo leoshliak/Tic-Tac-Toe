@@ -66,10 +66,6 @@ const GameBoard = (function(){
       }
     }
   },
-  checkForDraw: function(){
-    
-    
-  },
   restart: function(){
     squares.forEach(function(element) {
       element.textContent = '';
@@ -80,6 +76,7 @@ const GameBoard = (function(){
     player2.hisTurn = false;
     turn1String.style.opacity = 1;
     turn2String.style.opacity = 0;
+    turn = 0;
     player1Title.classList.remove('notYourTurn');
     player2Title.classList.add('notYourTurn');
     turn1String.textContent = "Player 1's turn";
