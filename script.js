@@ -1,6 +1,7 @@
 const GameBoard = (function(){
     let boardArray = ['', '', '', '', '', '', '', '', '',];
     let gameOver = false;
+    let turn = 0;
   const squares = document.querySelectorAll('.square');
   const turn1String = document.querySelector('.turn1');
   const turn2String = document.querySelector('.turn2');
@@ -61,8 +62,13 @@ const GameBoard = (function(){
           turn2String.textContent = 'Player 2 Won!'
         }
         return gameOver = true;
+      
       }
     }
+  },
+  checkForDraw: function(){
+    
+    
   },
   restart: function(){
     squares.forEach(function(element) {
@@ -93,7 +99,17 @@ const GameBoard = (function(){
     if(gameOver == true)return;
    playRound.printMarker(e); 
    playRound.addToArray(e);
+   turn++
    playRound.checkForWinner(boardArray);
+   if(turn == 9){
+    gameOver = true;
+    turn1String.style.opacity = 1;
+    turn2String.style.opacity = 1;
+    player1Title.classList.remove('notYourTurn');
+    player2Title.classList.remove('notYourTurn');
+    turn1String.textContent = "It's a draw!";
+    turn2String.textContent = "It's a draw!";
+   }
    playRound.turnFunct();
   }));
 })();
