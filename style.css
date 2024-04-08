@@ -20,13 +20,13 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 90px;
-    font-size: 1.3em;
+    height: 10vh;
+    font-size: 1.2em;
 }
 
 .player-div1,
 .player-div2{
-    font-size: 1.5em;
+    font-size: 1.4em;
 
 }
 
@@ -50,14 +50,17 @@ body{
     height: 65vh;
     width: 65vh;
     background-color: rgb(23, 27, 39);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     margin-top: 30px;
 }
 
 .square{
     border: 1px solid rgb(161 161 170);
-    font-size: 9.2em;
+    font-size: 7.5em;
     font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -85,8 +88,8 @@ body{
 }
 
 .restart{
-    width: 300px;
-    height: 80px;
+    width: 33vh;
+    height: 9vh;
     color: white;
     background-color: black;
     border: 1px solid white;
