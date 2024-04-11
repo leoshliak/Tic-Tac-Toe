@@ -24,10 +24,14 @@ body{
     font-size: 1.2em;
 }
 
-.player-div1,
-.player-div2{
+.player-div1{
+    margin-left: 5px;
     font-size: 1.4em;
+}
 
+.player-div2{
+    margin-right: 5px;
+    font-size: 1.4em;
 }
 
 .turn1{
@@ -107,4 +111,163 @@ body{
 .restart:active{
     background-color: rgb(36, 38, 39);  
     transform: scale(1.01);
+}
+
+@media (max-width: 1100px) {
+    .container {
+        gap: 100px;
+    }
+    .grid-board {
+        height: 60vh;
+        width: 60vh;
+    }
+    .player-div1{
+        margin-left: 5px;
+        font-size: 1.2em;
+    }
+    
+    .player-div2{
+        margin-right: 5px;
+        font-size: 1.2em;
+    }
+    .restart {
+        width: 30vh;
+        height: 8vh;
+        font-size: 1.8em;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 995px) {
+    .title{
+        font-size: 1.1rem;
+        height: 9vh;
+    }
+    .container {
+        height: 91vh;
+        gap: 80px;
+    }
+    .grid-board {
+        height: 55vh;
+        width: 55vh;
+        margin-top: 0px;
+    }
+    .square{
+        font-size: 6rem;
+    }
+    .player-div1{
+        margin-left: 5px;
+        font-size: 1.1em;
+    }
+    
+    .player-div2{
+        margin-right: 5px;
+        font-size: 1.1em;
+    }
+    .restart {
+        width: 27vh;
+        height: 7.2vh;
+        font-size: 1.5em;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 880px) {
+    .container {
+        height: 91vh;
+        gap: 60px;
+    }
+    .grid-board {
+        height: 50vh;
+        width: 50vh;
+        margin-top: 0px;
+    }
+    .square{
+        font-size: 5.5rem;
+    }
+    .player-div1{
+        margin-left: 5px;
+        font-size: 1em;
+    }
+    
+    .player-div2{
+        margin-right: 5px;
+        font-size: 1em;
+    }
+    .restart {
+        width: 25vh;
+        height: 7vh;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 775px) {
+    .container {
+    height: 91vh;
+    gap: 40px;
+}
+.grid-board {
+    height: 45vh;
+    width: 45vh;
+    margin-bottom: 40px;
+}
+.square{
+    font-size: 5rem;
+}
+.player-div1{
+    margin-left: 5px;
+    font-size: 1em;
+}
+
+.player-div2{
+    margin-right: 5px;
+    font-size: 1em;
+}
+.restart {
+    width: 22vh;
+    height: 6.4vh;
+    font-size: 1.2em;
+    font-weight: 600;
+}}
+@media (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 68vh;
+    }
+    .player-div1 {
+        margin-left: 0px;
+    }
+    .player-div2 {
+        margin-right: 0px;
+    }
+}
+@media (max-width: 450px) {
+    .grid-board {
+        height: 40vh;
+        width: 40vh;
+        margin-bottom: 40px;
+    }
+    .restart {
+        width: 21vh;
+        height: 6vh;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    .player-div1 {
+        font-size: 0.95em;
+    }
+    .player-div32 {
+        font-size: 0.95em;
+    }
 }
